@@ -25,17 +25,8 @@ jobs:
             cd /root/repos/skeleton-node-ms
             git pull origin main
             docker-compose restart
-      - name: Discord notification
-        uses: Ilshidur/action-discord@0.3.0
-        env:
-          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-          DISCORD_USERNAME: Github Actions Bot
-          DISCORD_EMBEDS: |
-            [{
-              "title": "${{ github.repository }}",
-              "url": "https://github.com/${{ github.repository }}",
-              "description": ":white_check_mark: [prod - ${{ github.event_name }}]. App se desplegó exitosamente por [${{ github.sha }}](https://github.com/${{ github.repository }}/commit/${{github.sha}})."
-            }]
+            echo "ok"
+            whoami
 
 
 
