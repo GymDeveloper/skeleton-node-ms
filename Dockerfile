@@ -17,7 +17,7 @@ RUN npm install
 COPY . .
 
 # Generate prisma configuration
-RUN npm run generate:prisma
+# RUN npm run generate:prisma
 
 EXPOSE 8080
 
